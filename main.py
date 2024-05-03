@@ -3,13 +3,10 @@ import sys
 from PyQt5.QtWidgets import QApplication
 from gui import StraightenUpApp
 
-
 def main():
     app = QApplication(sys.argv)
-    window = StraightenUpApp()
-    window.show()
+    ex = StraightenUpApp()
     sys.exit(app.exec_())
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
