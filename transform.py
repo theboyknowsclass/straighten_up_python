@@ -60,14 +60,14 @@ def four_point_transform(image, pts):
     return warped
 
 
-def find_and_correct_perspective(image_path):
+def find_and_correct_perspective(image_path, threshold=20, contour_number = 1):
     # Load the image
     image = cv2.imread(image_path)
     if image is None:
         print("Error: Image could not be read. Check the file path.")
         return
 
-    largest_contour = get_largest_contour(image)
+    largest_contour = get_largest_contour(image, threshold, contour_number)
 
     # If a suitable contour was found
     if largest_contour is not None:

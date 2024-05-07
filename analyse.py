@@ -10,7 +10,7 @@ def is_contour_touching_border(contour, img_width, img_height, border_margin=10)
     return False
 
 
-def get_largest_contour(image, threshold=40):
+def get_largest_contour(image, threshold=20, contour_count=1):
     # Convert to grayscale
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
